@@ -1,0 +1,40 @@
+name: Evaluation Gate
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "backend/app/rag/**"
+      - "backend/app/llm_gateway/**"
+      - "evaluation/**"
+
+jobs:
+  rag-evaluation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        working-directory: backend
+        run: pip install ".[dev]"
+
+      - name: Start backend
+        working-directory: backend
+        run: |
+          uvicorn app.main:app --host 0.0.0.0 --port 8000 &
+          sleep 5
+        env:
+          DEFAULT_LLM_PROVIDER: claude
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Run evaluation suite
+        working-directory: evaluation
+        run: |
+          pytest test_suites/api_tests/ -v --tb=short
+          # pytest test_suites/rag_eval/ -v --tb=short  # Enable in Week 2
+
+      - name: Check quality gate
+        run: echo "Quality gate check placeholder - implement in Week 4"

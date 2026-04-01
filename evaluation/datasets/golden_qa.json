@@ -1,0 +1,72 @@
+[
+  {
+    "id": "qa-001",
+    "question": "供应商准入的注册资本最低要求是多少？",
+    "expected_answer": "注册资本不低于人民币500万元",
+    "category": "procurement",
+    "source_doc": "supplier-admission-standards.md"
+  },
+  {
+    "id": "qa-002",
+    "question": "常规订单的交付周期要求是多少天？",
+    "expected_answer": "常规订单交付周期不超过7个工作日",
+    "category": "procurement",
+    "source_doc": "supplier-admission-standards.md"
+  },
+  {
+    "id": "qa-003",
+    "question": "A类商品应该放在仓库什么位置？",
+    "expected_answer": "A类商品应放在拣货区黄金库位",
+    "category": "warehouse",
+    "source_doc": "inbound-outbound-sop.md"
+  },
+  {
+    "id": "qa-004",
+    "question": "安全库存预警的触发条件是什么？",
+    "expected_answer": "当可用库存低于安全库存量时触发预警，自动触发补货申请",
+    "category": "warehouse",
+    "source_doc": "inbound-outbound-sop.md"
+  },
+  {
+    "id": "qa-005",
+    "question": "无理由退货的时限是多少天？",
+    "expected_answer": "自签收之日起7天内可无理由退货",
+    "category": "fulfillment",
+    "source_doc": "return-refund-policy.md"
+  },
+  {
+    "id": "qa-006",
+    "question": "质量问题退款需要多长时间？",
+    "expected_answer": "审核通过后5个工作日内退款",
+    "category": "fulfillment",
+    "source_doc": "return-refund-policy.md"
+  },
+  {
+    "id": "qa-007",
+    "question": "致命缺陷的定义是什么？举个例子。",
+    "expected_answer": "致命缺陷是指危及安全或违反法规的缺陷，例如漏电、有害物质超标",
+    "category": "quality_control",
+    "source_doc": "inspection-standards.md"
+  },
+  {
+    "id": "qa-008",
+    "question": "供应商绩效评估中质量维度占多大权重？",
+    "expected_answer": "质量维度占35%权重",
+    "category": "supplier_management",
+    "source_doc": "performance-evaluation.md"
+  },
+  {
+    "id": "qa-009",
+    "question": "供应商评分D级会怎么处理？",
+    "expected_answer": "D级（不合格，分数低于60）的供应商会暂停合作，并启动替代供应商",
+    "category": "supplier_management",
+    "source_doc": "performance-evaluation.md"
+  },
+  {
+    "id": "qa-010",
+    "question": "不合格品的处置方案有哪些？",
+    "expected_answer": "不合格品处置方案包括：返工(Rework)、让步接收(Concession)、退货(Return to supplier)、报废(Scrap)",
+    "category": "quality_control",
+    "source_doc": "inspection-standards.md"
+  }
+]

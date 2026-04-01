@@ -1,0 +1,20 @@
+# Evaluation Configuration
+# Used by evaluation test suites to configure thresholds and parameters
+
+api:
+  base_url: "http://localhost:8000/api"
+  timeout: 30
+
+thresholds:
+  faithfulness: 0.85
+  answer_relevancy: 0.80
+  context_precision: 0.75
+  context_recall: 0.80
+
+performance:
+  max_p95_latency_ms: 3000
+  min_throughput_rps: 10
+
+models_to_evaluate:
+  - claude
+  - deepseek
