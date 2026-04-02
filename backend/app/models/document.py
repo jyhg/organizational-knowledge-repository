@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from sqlalchemy import Column, String, DateTime, Text, Enum
+from sqlalchemy import Column, DateTime, Enum, String, Text
 from sqlalchemy.orm import DeclarativeBase
 
 

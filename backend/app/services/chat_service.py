@@ -1,5 +1,5 @@
-from app.rag.pipeline import RAGPipeline
 from app.llm_gateway.router import LLMRouter
+from app.rag.pipeline import RAGPipeline
 
 
 class ChatService:

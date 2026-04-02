@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="1" failures="0" errors="0" time="0.013416125">
+    <testsuite name="src/components/__tests__/AppLayout.spec.ts" timestamp="2026-04-02T00:23:06.814Z" hostname="luthens-Mac-mini.local" tests="1" failures="0" errors="0" skipped="0" time="0.013416125">
+        <testcase classname="src/components/__tests__/AppLayout.spec.ts" name="AppLayout &gt; renders the title" time="0.01261">
+            <system-err>
+[Vue warn]: Failed to resolve component: el-icon
+If this is a native custom element, make sure to exclude it from component resolution via compilerOptions.isCustomElement. 
+  at &lt;AppLayout ref=&quot;VTU_COMPONENT&quot; &gt; 
+  at &lt;VTUROOT&gt;
+[Vue warn]: Failed to resolve component: el-menu-item
+If this is a native custom element, make sure to exclude it from component resolution via compilerOptions.isCustomElement. 
+  at &lt;AppLayout ref=&quot;VTU_COMPONENT&quot; &gt; 
+  at &lt;VTUROOT&gt;
+[Vue warn]: Failed to resolve component: el-menu
+If this is a native custom element, make sure to exclude it from component resolution via compilerOptions.isCustomElement. 
+  at &lt;AppLayout ref=&quot;VTU_COMPONENT&quot; &gt; 
+  at &lt;VTUROOT&gt;
+[Vue warn]: Failed to resolve component: el-aside
+If this is a native custom element, make sure to exclude it from component resolution via compilerOptions.isCustomElement. 
+  at &lt;AppLayout ref=&quot;VTU_COMPONENT&quot; &gt; 
+  at &lt;VTUROOT&gt;
+[Vue warn]: Failed to resolve component: el-button
+If this is a native custom element, make sure to exclude it from component resolution via compilerOptions.isCustomElement. 
+  at &lt;AppLayout ref=&quot;VTU_COMPONENT&quot; &gt; 
+  at &lt;VTUROOT&gt;
+[Vue warn]: Failed to resolve component: el-header
+If this is a native custom element, make sure to exclude it from component resolution via compilerOptions.isCustomElement. 
+  at &lt;AppLayout ref=&quot;VTU_COMPONENT&quot; &gt; 
+  at &lt;VTUROOT&gt;
+[Vue warn]: Failed to resolve component: el-main
+If this is a native custom element, make sure to exclude it from component resolution via compilerOptions.isCustomElement. 
+  at &lt;AppLayout ref=&quot;VTU_COMPONENT&quot; &gt; 
+  at &lt;VTUROOT&gt;
+[Vue warn]: Failed to resolve component: el-container
+If this is a native custom element, make sure to exclude it from component resolution via compilerOptions.isCustomElement. 
+  at &lt;AppLayout ref=&quot;VTU_COMPONENT&quot; &gt; 
+  at &lt;VTUROOT&gt;
+
+            </system-err>
+        </testcase>
+    </testsuite>
+</testsuites>

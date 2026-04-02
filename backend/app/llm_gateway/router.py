@@ -14,9 +14,7 @@ class LLMRouter:
 
     def __init__(self):
         self.primary = self._create_provider(settings.default_llm_provider)
-        self.fallback_order = [
-            name for name in self.PROVIDERS if name != settings.default_llm_provider
-        ]
+        self.fallback_order = [name for name in self.PROVIDERS if name != settings.default_llm_provider]
 
     def _create_provider(self, name: str) -> LLMProvider:
         provider_cls = self.PROVIDERS.get(name)

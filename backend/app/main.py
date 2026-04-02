@@ -1,7 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.api import chat, docs, auth, eval as eval_api
+from app.api import auth, chat, docs
+from app.api import eval as eval_api
 from app.config import settings
 
 app = FastAPI(

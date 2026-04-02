@@ -2,8 +2,8 @@ from dataclasses import dataclass
 
 from app.rag.chunking.splitter import TextSplitter
 from app.rag.embedding.embedder import Embedder
-from app.rag.retrieval.vector_store import VectorStore
 from app.rag.rerank.reranker import Reranker
+from app.rag.retrieval.vector_store import VectorStore
 
 
 @dataclass
