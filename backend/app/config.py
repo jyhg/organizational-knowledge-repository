@@ -19,6 +19,8 @@ class Settings(BaseSettings):
     # LLM
     default_llm_provider: str = "claude"
     anthropic_api_key: str = ""
+    anthropic_base_url: str = ""  # override for compatible providers (e.g. MiniMax)
+    anthropic_model: str = "claude-sonnet-4-20250514"  # override via ANTHROPIC_MODEL
     openai_api_key: str = ""
     deepseek_api_key: str = ""
 

@@ -1,7 +1,10 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 
+from app.services.chat_service import ChatService
+
 router = APIRouter()
+_chat_service = ChatService()
 
 
 class ChatRequest(BaseModel):
@@ -18,9 +21,15 @@ class ChatResponse(BaseModel):
 @router.post("", response_model=ChatResponse)
 async def chat(request: ChatRequest):
     """Handle knowledge base Q&A requests via RAG pipeline."""
-    # TODO: integrate RAG pipeline
+    try:
+        result = await _chat_service.answer(
+            question=request.message,
+            conversation_id=request.conversation_id,
+        )
+    except Exception as e:
+        raise HTTPException(status_code=503, detail=f"LLM 服务暂时不可用: {e}") from e
     return ChatResponse(
-        answer="[RAG pipeline not yet connected]",
-        sources=[],
-        conversation_id=request.conversation_id or "new-session",
+        answer=result["answer"],
+        sources=result["sources"],
+        conversation_id=result["conversation_id"],
     )

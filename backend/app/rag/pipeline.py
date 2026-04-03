@@ -1,16 +1,8 @@
-from dataclasses import dataclass
-
 from app.rag.chunking.splitter import TextSplitter
 from app.rag.embedding.embedder import Embedder
+from app.rag.models import RetrievedContext
 from app.rag.rerank.reranker import Reranker
 from app.rag.retrieval.vector_store import VectorStore
-
-
-@dataclass
-class RetrievedContext:
-    content: str
-    source: str
-    score: float
 
 
 class RAGPipeline:

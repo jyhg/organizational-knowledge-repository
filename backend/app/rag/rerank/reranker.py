@@ -1,4 +1,4 @@
-from app.rag.pipeline import RetrievedContext
+from app.rag.models import RetrievedContext
 
 
 class Reranker:

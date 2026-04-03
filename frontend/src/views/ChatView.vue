@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { Promotion } from '@element-plus/icons-vue'
+import { sendChatMessage } from '@/api/chat'
 
 interface Message {
   role: 'user' | 'assistant'
@@ -16,6 +17,7 @@ const messages = ref<Message[]>([
   },
 ])
 const loading = ref(false)
+const conversationId = ref<string | undefined>(undefined)
 
 async function sendMessage() {
   const content = inputMessage.value.trim()
@@ -26,10 +28,17 @@ async function sendMessage() {
   loading.value = true
 
   try {
-    // TODO: integrate with backend /api/chat endpoint
+    const res = await sendChatMessage({ message: content, conversation_id: conversationId.value })
+    conversationId.value = res.data.conversation_id
     messages.value.push({
       role: 'assistant',
-      content: '[ 后端服务尚未连接，此为占位回复 ]',
+      content: res.data.answer,
+      sources: res.data.sources,
+    })
+  } catch (err) {
+    messages.value.push({
+      role: 'assistant',
+      content: '请求失败，请检查后端服务是否正常运行。',
       sources: [],
     })
   } finally {

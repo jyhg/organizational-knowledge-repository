@@ -1,4 +1,4 @@
-from app.rag.pipeline import RetrievedContext
+from app.rag.models import RetrievedContext
 
 SYSTEM_PROMPT = """你是一个企业供应链知识库助手。根据提供的上下文信息回答用户问题。
 规则：
